@@ -1,0 +1,29 @@
+﻿@model ProjeCV.Models.Entity.TBLEDUCATION
+@{
+    ViewBag.Title = "EgitimGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("Guncelle", "Egitim", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ID)
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(m => m.TITLE, new { @class = "form-control" })
+        <br />
+        @Html.Label("Alt Başlık")
+        @Html.TextBoxFor(m => m.SUBTITLE, new { @class = "form-control" })
+        <br />
+        @Html.Label("Bölüm")
+        @Html.TextBoxFor(m => m.DEPARTMENT, new { @class = "form-control" })
+        <br />
+        @Html.Label("GNO")
+        @Html.TextBoxFor(m => m.GPA, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}
+
